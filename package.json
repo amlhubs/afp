@@ -1,0 +1,54 @@
+{
+  "name": "@amlhubs/afp",
+  "version": "0.0.1",
+  "description": "OMG Automated Function Points (AFP) 1.0 — formal/14-01-03 / ISO/IEC 19515:2019. IFPUG-compliant function-point sizing as a typed SMM 1.2 measurement library. Surfaces every AFP measure (FTR, DET, RET, FTR_EO, DET_EO, EOC, EOCsum, wEO, EOs, FTR_EI, DET_EI, EIC, EICSum, wEI, EIs, RET_LF, DET_LF, DFC, DFCsum, wILF, ILFs, wEIF, EIFs, AFPs), Scope (Element, EO, EI, LF, Segment), Characteristic (FunctionalMeasures, ExternalOutputSize, ExternalInputSize, InternalLogicalFileSizeAndExternaInterfaceFileSize, AutomatedFunctionPointSize, General), and KDM-recognizer Operation (isEO, getEOs, isEI, getEIs, isILF, getILFs, isEIF, getEIFs, isLF) as TypeScript instances of @amlhubs/smm metaclasses.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amlhubs/afp.git",
+    "directory": "."
+  },
+  "keywords": [
+    "afp",
+    "automated-function-points",
+    "function-points",
+    "ifpug",
+    "iso-iec-19515",
+    "smm",
+    "structured-metrics-metamodel",
+    "metamodel",
+    "metaclass",
+    "omg",
+    "software-sizing",
+    "kdm",
+    "agentic-modeling-language",
+    "aml",
+    "agenihub"
+  ],
+  "license": "UNLICENSED",
+  "peerDependencies": {
+    "@amlhubs/smm": "^0.0.2",
+    "@amlhubs/uml": "^0.0.2"
+  },
+  "devDependencies": {
+    "@amlhubs/smm": "^0.0.2",
+    "@amlhubs/uml": "^0.0.2"
+  }
+}

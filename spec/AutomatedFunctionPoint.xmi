@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<smm:SmmModel xmlns:smm="http://schema.omg.org/spec/SMM/1.0"
+    xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:version="2.1"
+    xmi:id="__4K-0fOZEeGAl6dCCRBZ4Q" name="AutomatedFunctionPoint"
+    shortDescription="Automated Function Point SMM Model"
+    description="SMM representation of the Automated Function Point specification.">
+    <libraries xmi:id="_XW4E8POaEeGAl6dCCRBZ4Q" name="AutomatedFunctionPointLibrary"
+        shortDescription="Automated Function Point Measurement Library">
+        <measureElements xmi:type="smm:MeasureCategory" xmi:id="_lMjzofOgEeGtUOd1RMSY8w"
+            name="FunctionalMeasures"
+            categoryMeasure="_n9QZoPOgEeGtUOd1RMSY8w _-YGPAPOgEeGtUOd1RMSY8w _DQKKIPOhEeGtUOd1RMSY8w _XUNHQPOhEeGtUOd1RMSY8w _5AFzEPOhEeGtUOd1RMSY8w _ClRvMPOjEeGtUOd1RMSY8w _Tvj_APOlEeGtUOd1RMSY8w _XZnVQPOtEeGtUOd1RMSY8w _dkTPQPa1EeGHXuMIrzLXMA _qpCzAvO3EeGtUOd1RMSY8w _Zdha0PO6EeGtUOd1RMSY8w _AgJh0fO7EeGtUOd1RMSY8w _QHdN4PO7EeGtUOd1RMSY8w _oym5APO7EeGtUOd1RMSY8w _5dUi0PO7EeGtUOd1RMSY8w _R-In8Pa2EeGHXuMIrzLXMA _xVQNEPa8EeGHXuMIrzLXMA _GBTlYPa9EeGHXuMIrzLXMA _jYXmAPa9EeGHXuMIrzLXMA _uFgBoPa-EeGHXuMIrzLXMA _DwRE8Pa_EeGHXuMIrzLXMA _XVXcQPa_EeGHXuMIrzLXMA _rX0d8Pa_EeGHXuMIrzLXMA _HlA3APbBEeGHXuMIrzLXMA"/>
+        <measureElements xmi:type="smm:Characteristic" xmi:id="_mujx4POgEeGtUOd1RMSY8w"
+            name="ExternalOutputSize" parent="__ugqQPa_EeGHXuMIrzLXMA"
+            measures="_DQKKIPOhEeGtUOd1RMSY8w _XUNHQPOhEeGtUOd1RMSY8w _5AFzEPOhEeGtUOd1RMSY8w _ClRvMPOjEeGtUOd1RMSY8w _Tvj_APOlEeGtUOd1RMSY8w _XZnVQPOtEeGtUOd1RMSY8w"/>
+        <measureElements xmi:type="smm:DimensionalMeasure" xmi:id="_n9QZoPOgEeGtUOd1RMSY8w"
+            name="FTR" shortDescription="File Types Referenced"
+            description="The number of RelationalTables, DataSegments and RecordFiles referenced in an External Input or External Output."
+            category="_lMjzofOgEeGtUOd1RMSY8w" trait="_V_RaAPO0EeGtUOd1RMSY8w"
+            scope="_ttONIPOgEeGtUOd1RMSY8w" unit="Cardinal"
+            rescaleTo="_I4froPOhEeGtUOd1RMSY8w _BFys4PO4EeGtUOd1RMSY8w"/>
+        <measureElements xmi:type="smm:Scope" xmi:id="_ttONIPOgEeGtUOd1RMSY8w" name="Element"
+            shortDescription="ExternalOutput" _class="kdm:Core::Element"
+            measures="_n9QZoPOgEeGtUOd1RMSY8w _-YGPAPOgEeGtUOd1RMSY8w _dkTPQPa1EeGHXuMIrzLXMA"/>
+        <measureElements xmi:type="smm:DimensionalMeasure" xmi:id="_-YGPAPOgEeGtUOd1RMSY8w"
+            name="DET" shortDescription="Data Element Types"
+            description="The number of ItemUnits in an Internal Logical File or External Interface File."
+            category="_lMjzofOgEeGtUOd1RMSY8w" trait="_V_RaAPO0EeGtUOd1RMSY8w"
+            scope="_ttONIPOgEeGtUOd1RMSY8w" unit="Cardinal"
+            rescaleTo="_bYBiAPOhEeGtUOd1RMSY8w _8U-h4PO6EeGtUOd1RMSY8w __N5X4Pa8EeGHXuMIrzLXMA"/>
+        <measureElements xmi:type="smm:RescaledMeasure" xmi:id="_DQKKIPOhEeGtUOd1RMSY8w"
+            name="FTR_EO" shortDescription="File Types Referenced rescaled for External Output"
+            category="_lMjzofOgEeGtUOd1RMSY8w" trait="_mujx4POgEeGtUOd1RMSY8w"
+            scope="_pd9nUPO0EeGtUOd1RMSY8w" unit="Cardinal"
+            formula="IF FTR &lt; 2 THEN FTR_EO = 1; IF 2 &lt;= FTR &lt;= 3 THEN FTR_EO = 2; IF FTR &gt; 3 THEN FTR_EO = 3"
+            rescaleFrom="_I4froPOhEeGtUOd1RMSY8w">
+            <measureRelationships xmi:type="smm:RescaledMeasureRelationship"
+                xmi:id="_I4froPOhEeGtUOd1RMSY8w" name="FTR to FTR_EO" from="_n9QZoPOgEeGtUOd1RMSY8w"
+                to="_DQKKIPOhEeGtUOd1RMSY8w"/>
+        </measureElements>
+        <measureElements xmi:type="smm:RescaledMeasure" xmi:id="_XUNHQPOhEeGtUOd1RMSY8w"
+            name="DET_EO" shortDescription="Data Element Type rescaled for External Output"
+            category="_lMjzofOgEeGtUOd1RMSY8w" trait="_mujx4POgEeGtUOd1RMSY8w"
+            scope="_pd9nUPO0EeGtUOd1RMSY8w" unit="Cardinal"
+            baseMeasure2From="_on_mcPOlEeGtUOd1RMSY8w"
+            formula="IF 1 &lt;= DET &lt;= 5 THEN DET_EO = 1; IF 6 &lt;= DET &lt;= 19 THEN DET_EO = 2; IF DET &gt; 19 THEN DET_EO = 3"
+            rescaleFrom="_bYBiAPOhEeGtUOd1RMSY8w">
+            <measureRelationships xmi:type="smm:RescaledMeasureRelationship"
+                xmi:id="_bYBiAPOhEeGtUOd1RMSY8w" name="DET_to_DET_EO" from="_-YGPAPOgEeGtUOd1RMSY8w"
+                to="_XUNHQPOhEeGtUOd1RMSY8w"/>
+        </measureElements>
+        <measureElements xmi:type="smm:RescaledMeasure" xmi:id="_5AFzEPOhEeGtUOd1RMSY8w" name="EOC"
+            shortDescription="External Output Complexity" category="_lMjzofOgEeGtUOd1RMSY8w"
+            trait="_mujx4POgEeGtUOd1RMSY8w" scope="_pd9nUPO0EeGtUOd1RMSY8w" unit="Cardinal"
+            rescaleTo="_HrpzIPOjEeGtUOd1RMSY8w"
+            formula="IF EOCsum &lt;= 3 THEN EOC = 1; IF EOCsum = 4 THEN EOC = 2; IF EOCsum &gt; 4 THEN EOC = 3"
+            rescaleFrom="_6JICQPOiEeGtUOd1RMSY8w">
+            <measureRelationships xmi:type="smm:RescaledMeasureRelationship"
+                xmi:id="_6JICQPOiEeGtUOd1RMSY8w" name="EOCsum_to_EOC" from="_Tvj_APOlEeGtUOd1RMSY8w"
+                to="_5AFzEPOhEeGtUOd1RMSY8w"/>
+        </measureElements>
+        <measureElements xmi:type="smm:RescaledMeasure" xmi:id="_ClRvMPOjEeGtUOd1RMSY8w" name="wEO"
+            shortDescription="External Output Weight" category="_lMjzofOgEeGtUOd1RMSY8w"
+            trait="_mujx4POgEeGtUOd1RMSY8w" scope="_pd9nUPO0EeGtUOd1RMSY8w" unit="Cardinal"
+            baseMeasureFrom="_dRcEQPOtEeGtUOd1RMSY8w"
+            formula="IF EOC=1 THEN wEO=4; IF EOC=2 THEN wEO=5; IF EOC=3 THEN wEO=7"
+            rescaleFrom="_HrpzIPOjEeGtUOd1RMSY8w">
+            <measureRelationships xmi:type="smm:RescaledMeasureRelationship"
+                xmi:id="_HrpzIPOjEeGtUOd1RMSY8w" name="EOC_to_wEO" from="_5AFzEPOhEeGtUOd1RMSY8w"
+                to="_ClRvMPOjEeGtUOd1RMSY8w"/>
+        </measureElements>
+        <measureElements xmi:type="smm:BinaryMeasure" xmi:id="_Tvj_APOlEeGtUOd1RMSY8w" name="EOCsum"
+            shortDescription="External Output Complexity sum" category="_lMjzofOgEeGtUOd1RMSY8w"
+            trait="_mujx4POgEeGtUOd1RMSY8w" scope="_pd9nUPO0EeGtUOd1RMSY8w" unit="Cardinal"
+            rescaleTo="_6JICQPOiEeGtUOd1RMSY8w" functor="add"
+            baseMeasure1To="_gNYxoPOlEeGtUOd1RMSY8w" baseMeasure2To="_on_mcPOlEeGtUOd1RMSY8w">
+            <measureRelationships xmi:type="smm:Base1MeasureRelationship"
+                xmi:id="_gNYxoPOlEeGtUOd1RMSY8w" name="EOCsum_to_FTR_EO"
+                to="_DQKKIPOhEeGtUOd1RMSY8w" from="_Tvj_APOlEeGtUOd1RMSY8w"/>
+            <measureRelationships xmi:type="smm:Base2MeasureRelationship"
+                xmi:id="_on_mcPOlEeGtUOd1RMSY8w" name="EOCsum_to_DET_EO"
+                to="_XUNHQPOhEeGtUOd1RMSY8w" from="_Tvj_APOlEeGtUOd1RMSY8w"/>
+        </measureElements>
+        <measureElements xmi:type="smm:CollectiveMeasure" xmi:id="_XZnVQPOtEeGtUOd1RMSY8w"
+            name="EOs" shortDescription="External Output Size" category="_lMjzofOgEeGtUOd1RMSY8w"
+            trait="_mujx4POgEeGtUOd1RMSY8w" scope="_If4nQPO1EeGtUOd1RMSY8w" unit="Cardinal"
+            baseMeasureFrom="_i2m_8PbBEeGHXuMIrzLXMA" baseMeasureTo="_dRcEQPOtEeGtUOd1RMSY8w">
+            <measureRelationships xmi:type="smm:BaseMeasureRelationship"
+                xmi:id="_dRcEQPOtEeGtUOd1RMSY8w" name="EOs_to_wEO"
+                measurandQuery="_-RJX0POzEeGtUOd1RMSY8w" to="_ClRvMPOjEeGtUOd1RMSY8w"
+                from="_XZnVQPOtEeGtUOd1RMSY8w"/>
+        </measureElements>
+        <measureElements xmi:type="smm:Operation" xmi:id="_eFrLUPOyEeGtUOd1RMSY8w" name="isEO"
+            shortDescription=""
+            description="Return true if the argument KDM Element is an External Output and false otherwise."/>
+        <measureElements xmi:type="smm:Operation" xmi:id="_-RJX0POzEeGtUOd1RMSY8w" name="getEOs"
+            description="Get the External Output elements from a KDM Segment (such that isEO is true)."/>
+        <measureElements xmi:type="smm:Characteristic" xmi:id="_V_RaAPO0EeGtUOd1RMSY8w"
+            name="General"
+            measures="_n9QZoPOgEeGtUOd1RMSY8w _-YGPAPOgEeGtUOd1RMSY8w _dkTPQPa1EeGHXuMIrzLXMA"/>
+        <measureElements xmi:type="smm:Scope" xmi:id="_pd9nUPO0EeGtUOd1RMSY8w" name="EO"
+            shortDescription="External Output" _class="kdm:Core::Element"
+            measures="_DQKKIPOhEeGtUOd1RMSY8w _XUNHQPOhEeGtUOd1RMSY8w _5AFzEPOhEeGtUOd1RMSY8w _ClRvMPOjEeGtUOd1RMSY8w _Tvj_APOlEeGtUOd1RMSY8w"
+            recognizerQuery="_eFrLUPOyEeGtUOd1RMSY8w"/>
+        <measureElements xmi:type="smm:Scope" xmi:id="_If4nQPO1EeGtUOd1RMSY8w" name="Segment"
+            shortDescription="A KDM Segment" _class="kdm:kdm::Segment"
+            measures="_XZnVQPOtEeGtUOd1RMSY8w _5dUi0PO7EeGtUOd1RMSY8w _DwRE8Pa_EeGHXuMIrzLXMA _HlA3APbBEeGHXuMIrzLXMA"/>
+        <measureElements xmi:type="smm:Characteristic" xmi:id="_DEBJkPO3EeGtUOd1RMSY8w"
+            name="ExternalInputSize" parent="__ugqQPa_EeGHXuMIrzLXMA"
+            measures="_qpCzAvO3EeGtUOd1RMSY8w _Zdha0PO6EeGtUOd1RMSY8w _AgJh0fO7EeGtUOd1RMSY8w _QHdN4PO7EeGtUOd1RMSY8w _oym5APO7EeGtUOd1RMSY8w _5dUi0PO7EeGtUOd1RMSY8w"/>
+        <measureElements xmi:type="smm:RescaledMeasure" xmi:id="_qpCzAvO3EeGtUOd1RMSY8w"
+            name="FTR_EI" shortDescription="File Types Referenced rescaled for External Input"
+            category="_lMjzofOgEeGtUOd1RMSY8w" trait="_DEBJkPO3EeGtUOd1RMSY8w"
+            scope="_uyQrIPO3EeGtUOd1RMSY8w" unit="Cardinal"
+            formula="IF FTR &lt; 2 THEN FTR_EI = 1; IF FTR = 2 THEN FTR_EI = 2; IF FTR &gt; 2 THEN FTR_EI = 3"
+            rescaleFrom="_BFys4PO4EeGtUOd1RMSY8w">
+            <measureRelationships xmi:type="smm:RescaledMeasureRelationship"
+                xmi:id="_BFys4PO4EeGtUOd1RMSY8w" name="FTR to FTR_EI" from="_n9QZoPOgEeGtUOd1RMSY8w"
+                to="_qpCzAvO3EeGtUOd1RMSY8w"/>
+        </measureElements>
+        <measureElements xmi:type="smm:Scope" xmi:id="_uyQrIPO3EeGtUOd1RMSY8w" name="EI"
+            shortDescription="External Input" _class="kdm:Core::Element"
+            measures="_qpCzAvO3EeGtUOd1RMSY8w _Zdha0PO6EeGtUOd1RMSY8w _AgJh0fO7EeGtUOd1RMSY8w _QHdN4PO7EeGtUOd1RMSY8w _oym5APO7EeGtUOd1RMSY8w"/>
+        <measureElements xmi:type="smm:Operation" xmi:id="_z5r38PO3EeGtUOd1RMSY8w" name="isEI"
+            description="Return true if the KDM Element is an External Output and false otherwise."/>
+        <measureElements xmi:type="smm:Operation" xmi:id="_709FYPO3EeGtUOd1RMSY8w" name="getEIs"
+            description="Get the External Output elements from a KDM Segment (such that isEO is true)."/>
+        <measureElements xmi:type="smm:RescaledMeasure" xmi:id="_Zdha0PO6EeGtUOd1RMSY8w"
+            name="DET_EI" shortDescription="Data Element Types rescaled for External Input"
+            category="_lMjzofOgEeGtUOd1RMSY8w" trait="_DEBJkPO3EeGtUOd1RMSY8w"
+            scope="_uyQrIPO3EeGtUOd1RMSY8w" unit="Cardinal"
+            baseMeasure2From="_jV_fUPO7EeGtUOd1RMSY8w"
+            formula="IF 1 &lt;= DET &lt;= 4  THEN DET_EI = 1; IF 5 &lt;= DET &lt;= 15 THEN DET_EI = 2; IF DET &gt; 15 THEN DET_EI = 3"
+            rescaleFrom="_8U-h4PO6EeGtUOd1RMSY8w">
+            <measureRelationships xmi:type="smm:RescaledMeasureRelationship"
+                xmi:id="_8U-h4PO6EeGtUOd1RMSY8w" name="DET_to_DET_EI" from="_-YGPAPOgEeGtUOd1RMSY8w"
+                to="_Zdha0PO6EeGtUOd1RMSY8w"/>
+        </measureElements>
+        <measureElements xmi:type="smm:RescaledMeasure" xmi:id="_AgJh0fO7EeGtUOd1RMSY8w" name="EIC"
+            shortDescription="External Input Complexity" category="_lMjzofOgEeGtUOd1RMSY8w"
+            trait="_DEBJkPO3EeGtUOd1RMSY8w" scope="_uyQrIPO3EeGtUOd1RMSY8w" unit="Cardinal"
+            rescaleTo="_1FUn0PO7EeGtUOd1RMSY8w"
+            formula="IF EICsum &lt;= 3 THEN EIC = 1; IF EICsum = 4 THEN EIC = 2; IF EICsum &gt; 4 THEN EIC = 3"
+            rescaleFrom="_xHzpYPO7EeGtUOd1RMSY8w">
+            <measureRelationships xmi:type="smm:RescaledMeasureRelationship"
+                xmi:id="_xHzpYPO7EeGtUOd1RMSY8w" name="EICsum_to_EIC" from="_QHdN4PO7EeGtUOd1RMSY8w"
+                to="_AgJh0fO7EeGtUOd1RMSY8w"/>
+        </measureElements>
+        <measureElements xmi:type="smm:BinaryMeasure" xmi:id="_QHdN4PO7EeGtUOd1RMSY8w" name="EICSum"
+            shortDescription="External Input Complexity sum" category="_lMjzofOgEeGtUOd1RMSY8w"
+            trait="_DEBJkPO3EeGtUOd1RMSY8w" scope="_uyQrIPO3EeGtUOd1RMSY8w" unit="Cardinal"
+            rescaleTo="_xHzpYPO7EeGtUOd1RMSY8w" functor="add"
+            baseMeasure1To="_daXOYPO7EeGtUOd1RMSY8w" baseMeasure2To="_jV_fUPO7EeGtUOd1RMSY8w">
+            <measureRelationships xmi:type="smm:Base1MeasureRelationship"
+                xmi:id="_daXOYPO7EeGtUOd1RMSY8w" to="_qpCzAvO3EeGtUOd1RMSY8w"
+                from="_QHdN4PO7EeGtUOd1RMSY8w"/>
+            <measureRelationships xmi:type="smm:Base2MeasureRelationship"
+                xmi:id="_jV_fUPO7EeGtUOd1RMSY8w" to="_Zdha0PO6EeGtUOd1RMSY8w"
+                from="_QHdN4PO7EeGtUOd1RMSY8w"/>
+        </measureElements>
+        <measureElements xmi:type="smm:RescaledMeasure" xmi:id="_oym5APO7EeGtUOd1RMSY8w" name="wEI"
+            shortDescription="External Input Weight" category="_lMjzofOgEeGtUOd1RMSY8w"
+            trait="_DEBJkPO3EeGtUOd1RMSY8w" scope="_uyQrIPO3EeGtUOd1RMSY8w" unit="Cardinal"
+            baseMeasureFrom="_JeSsEPO8EeGtUOd1RMSY8w"
+            formula="IF EIC=1 THEN wEI=3; IF EIC=2 THEN wEI=4; IF EIC=3 THEN wEI=6"
+            rescaleFrom="_1FUn0PO7EeGtUOd1RMSY8w">
+            <measureRelationships xmi:type="smm:RescaledMeasureRelationship"
+                xmi:id="_1FUn0PO7EeGtUOd1RMSY8w" name="EIC_to_wEI" from="_AgJh0fO7EeGtUOd1RMSY8w"
+                to="_oym5APO7EeGtUOd1RMSY8w"/>
+        </measureElements>
+        <measureElements xmi:type="smm:CollectiveMeasure" xmi:id="_5dUi0PO7EeGtUOd1RMSY8w"
+            name="EIs" shortDescription="External Input Size" category="_lMjzofOgEeGtUOd1RMSY8w"
+            trait="_DEBJkPO3EeGtUOd1RMSY8w" scope="_If4nQPO1EeGtUOd1RMSY8w" unit="Cardinal"
+            baseMeasureFrom="_ePrREPbBEeGHXuMIrzLXMA" baseMeasureTo="_JeSsEPO8EeGtUOd1RMSY8w">
+            <measureRelationships xmi:type="smm:BaseMeasureRelationship"
+                xmi:id="_JeSsEPO8EeGtUOd1RMSY8w" name="EIs_to_wEI"
+                measurandQuery="_709FYPO3EeGtUOd1RMSY8w" to="_oym5APO7EeGtUOd1RMSY8w"
+                from="_5dUi0PO7EeGtUOd1RMSY8w"/>
+        </measureElements>
+        <measureElements xmi:type="smm:Characteristic" xmi:id="_Tfs90Pa1EeGHXuMIrzLXMA"
+            name="InternalLogicalFileSizeAndExternaInterfaceFileSize"
+            parent="__ugqQPa_EeGHXuMIrzLXMA"
+            measures="_R-In8Pa2EeGHXuMIrzLXMA _xVQNEPa8EeGHXuMIrzLXMA _GBTlYPa9EeGHXuMIrzLXMA _jYXmAPa9EeGHXuMIrzLXMA _uFgBoPa-EeGHXuMIrzLXMA _DwRE8Pa_EeGHXuMIrzLXMA _XVXcQPa_EeGHXuMIrzLXMA _rX0d8Pa_EeGHXuMIrzLXMA"/>
+        <measureElements xmi:type="smm:DimensionalMeasure" xmi:id="_dkTPQPa1EeGHXuMIrzLXMA"
+            name="RET" shortDescription="Record Element Types"
+            description="The number of ContentGroups in the File Types Referenced in an Internal Logical File or External Interface File."
+            category="_lMjzofOgEeGtUOd1RMSY8w" trait="_V_RaAPO0EeGtUOd1RMSY8w"
+            scope="_ttONIPOgEeGtUOd1RMSY8w" unit="Cardinal" rescaleTo="_r7GRgPa8EeGHXuMIrzLXMA"/>
+        <measureElements xmi:type="smm:RescaledMeasure" xmi:id="_R-In8Pa2EeGHXuMIrzLXMA"
+            name="RET_LF" shortDescription="Record Element Types rescaled for Logical Files"
+            category="_lMjzofOgEeGtUOd1RMSY8w" trait="_Tfs90Pa1EeGHXuMIrzLXMA"
+            scope="_SXzdcPa8EeGHXuMIrzLXMA" unit="Cardinal"
+            formula="IF RET = 1 THEN RET_LF = 1; IF 2 &lt;= RET &lt;= 5 THEN RET_LF = 2; IF RET &gt; 5 THEN RET_LF = 3"
+            rescaleFrom="_r7GRgPa8EeGHXuMIrzLXMA">
+            <measureRelationships xmi:type="smm:RescaledMeasureRelationship"
+                xmi:id="_r7GRgPa8EeGHXuMIrzLXMA" name="RE_to_RET_LF" from="_dkTPQPa1EeGHXuMIrzLXMA"
+                to="_R-In8Pa2EeGHXuMIrzLXMA"/>
+        </measureElements>
+        <measureElements xmi:type="smm:Operation" xmi:id="_kRa_0Pa7EeGHXuMIrzLXMA" name="isILF"
+            shortDescription=""
+            description="Return true if the argument KDM Element is an Internal Logical File and false otherwise."/>
+        <measureElements xmi:type="smm:Operation" xmi:id="_0WPHQPa7EeGHXuMIrzLXMA" name="getILFs"
+            description="Get the Internal Logical File elements from a KDM Segment (such that isILF is true)."/>
+        <measureElements xmi:type="smm:Operation" xmi:id="_67SIoPa7EeGHXuMIrzLXMA" name="isEIF"
+            description="Return true if the argument KDM Element is an External Interface File and false otherwise."/>
+        <measureElements xmi:type="smm:Operation" xmi:id="_Bj7QkPa8EeGHXuMIrzLXMA" name="getEIFs"
+            description="Get the External Interface File elements from a KDM Segment (such that isILF is true)."/>
+        <measureElements xmi:type="smm:Operation" xmi:id="_IUOfsPa8EeGHXuMIrzLXMA" name="isLF"
+            description="Return true if the argument KDM Element is an Internal Logical File or External Interface File and false otherwise. (Equivalent to isILF or isEIF.)"/>
+        <measureElements xmi:type="smm:Scope" xmi:id="_SXzdcPa8EeGHXuMIrzLXMA" name="LF"
+            shortDescription="Logical File (Internal Logical File or External Interface File)"
+            _class="kdm:Core::Element"
+            measures="_R-In8Pa2EeGHXuMIrzLXMA _xVQNEPa8EeGHXuMIrzLXMA _GBTlYPa9EeGHXuMIrzLXMA _jYXmAPa9EeGHXuMIrzLXMA _uFgBoPa-EeGHXuMIrzLXMA _XVXcQPa_EeGHXuMIrzLXMA _rX0d8Pa_EeGHXuMIrzLXMA"
+            recognizerQuery="_IUOfsPa8EeGHXuMIrzLXMA"/>
+        <measureElements xmi:type="smm:RescaledMeasure" xmi:id="_xVQNEPa8EeGHXuMIrzLXMA"
+            name="DET_LF" shortDescription="Data Element Types rescaled for Logical Files"
+            category="_lMjzofOgEeGtUOd1RMSY8w" trait="_Tfs90Pa1EeGHXuMIrzLXMA"
+            scope="_SXzdcPa8EeGHXuMIrzLXMA" unit="Cardinal"
+            baseMeasure2From="_ZFzKAPa9EeGHXuMIrzLXMA"
+            formula="IF 1 &lt;= DET &lt;=19 THEN DET_LF = 1; IF 20 &lt;= DET &lt;= 50 THEN DET_LF = 2 ; IF DET &gt; 50 THEN DET_LF = 3"
+            rescaleFrom="__N5X4Pa8EeGHXuMIrzLXMA">
+            <measureRelationships xmi:type="smm:RescaledMeasureRelationship"
+                xmi:id="__N5X4Pa8EeGHXuMIrzLXMA" name="DET_to_DET_LF" from="_-YGPAPOgEeGtUOd1RMSY8w"
+                to="_xVQNEPa8EeGHXuMIrzLXMA"/>
+        </measureElements>
+        <measureElements xmi:type="smm:BinaryMeasure" xmi:id="_GBTlYPa9EeGHXuMIrzLXMA" name="DFCsum"
+            shortDescription="Data Function Complexity Sum" category="_lMjzofOgEeGtUOd1RMSY8w"
+            trait="_Tfs90Pa1EeGHXuMIrzLXMA" scope="_SXzdcPa8EeGHXuMIrzLXMA" unit="Cardinal"
+            rescaleTo="_nu5r8Pa-EeGHXuMIrzLXMA" functor="add"
+            baseMeasure1To="_RonmwPa9EeGHXuMIrzLXMA" baseMeasure2To="_ZFzKAPa9EeGHXuMIrzLXMA">
+            <measureRelationships xmi:type="smm:Base1MeasureRelationship"
+                xmi:id="_RonmwPa9EeGHXuMIrzLXMA" name="DFCsum_to_RET_LF"
+                to="_R-In8Pa2EeGHXuMIrzLXMA" from="_GBTlYPa9EeGHXuMIrzLXMA"/>
+            <measureRelationships xmi:type="smm:Base2MeasureRelationship"
+                xmi:id="_ZFzKAPa9EeGHXuMIrzLXMA" name="DFCsum_to_DET_LF"
+                to="_xVQNEPa8EeGHXuMIrzLXMA" from="_GBTlYPa9EeGHXuMIrzLXMA"/>
+        </measureElements>
+        <measureElements xmi:type="smm:RescaledMeasure" xmi:id="_jYXmAPa9EeGHXuMIrzLXMA" name="DFC"
+            shortDescription="Data Function Complexity" category="_lMjzofOgEeGtUOd1RMSY8w"
+            trait="_Tfs90Pa1EeGHXuMIrzLXMA" scope="_SXzdcPa8EeGHXuMIrzLXMA" unit="Cardinal"
+            rescaleTo="_9j9TsPa-EeGHXuMIrzLXMA _lnT34Pa_EeGHXuMIrzLXMA"
+            formula="IF DFCsum &lt;= 3 THEN DFC= 1; IF DFCsum = 4 THEN DFC = 2; IF DFCsum &gt; 4 THEN DFC = 3"
+            rescaleFrom="_nu5r8Pa-EeGHXuMIrzLXMA">
+            <measureRelationships xmi:type="smm:RescaledMeasureRelationship"
+                xmi:id="_nu5r8Pa-EeGHXuMIrzLXMA" name="DFCsum_to_DFC" from="_GBTlYPa9EeGHXuMIrzLXMA"
+                to="_jYXmAPa9EeGHXuMIrzLXMA"/>
+        </measureElements>
+        <measureElements xmi:type="smm:RescaledMeasure" xmi:id="_uFgBoPa-EeGHXuMIrzLXMA" name="wILF"
+            shortDescription="Internal Logical File Weight" category="_lMjzofOgEeGtUOd1RMSY8w"
+            trait="_Tfs90Pa1EeGHXuMIrzLXMA" scope="_SXzdcPa8EeGHXuMIrzLXMA" unit="Cardinal"
+            baseMeasureFrom="_MaMvMPa_EeGHXuMIrzLXMA"
+            formula="IF DFC=1 THEN wILF=7; IF DFC=2 THEN wILF=10; IF DFC=3 THEN wILF=15"
+            rescaleFrom="_9j9TsPa-EeGHXuMIrzLXMA">
+            <measureRelationships xmi:type="smm:RescaledMeasureRelationship"
+                xmi:id="_9j9TsPa-EeGHXuMIrzLXMA" name="DFC_to_wILF" from="_jYXmAPa9EeGHXuMIrzLXMA"
+                to="_uFgBoPa-EeGHXuMIrzLXMA"/>
+        </measureElements>
+        <measureElements xmi:type="smm:CollectiveMeasure" xmi:id="_DwRE8Pa_EeGHXuMIrzLXMA"
+            name="ILFs" shortDescription="Internal Logical File Size"
+            category="_lMjzofOgEeGtUOd1RMSY8w" trait="_Tfs90Pa1EeGHXuMIrzLXMA"
+            scope="_If4nQPO1EeGtUOd1RMSY8w" unit="Cardinal"
+            baseMeasureFrom="_VSghwPbBEeGHXuMIrzLXMA" baseMeasureTo="_MaMvMPa_EeGHXuMIrzLXMA">
+            <measureRelationships xmi:type="smm:BaseMeasureRelationship"
+                xmi:id="_MaMvMPa_EeGHXuMIrzLXMA" name="ILFs_to_wILF"
+                measurandQuery="_0WPHQPa7EeGHXuMIrzLXMA" to="_uFgBoPa-EeGHXuMIrzLXMA"
+                from="_DwRE8Pa_EeGHXuMIrzLXMA"/>
+        </measureElements>
+        <measureElements xmi:type="smm:RescaledMeasure" xmi:id="_XVXcQPa_EeGHXuMIrzLXMA" name="wEIF"
+            shortDescription="External Interface File Weight" category="_lMjzofOgEeGtUOd1RMSY8w"
+            trait="_Tfs90Pa1EeGHXuMIrzLXMA" scope="_SXzdcPa8EeGHXuMIrzLXMA" unit=""
+            baseMeasureFrom="_z4oBYPa_EeGHXuMIrzLXMA"
+            formula="IF DFC=1 THEN wEIF=5; IF DFC=2 THEN wEIF=7; IF DFC=3 THEN wEIF=10"
+            rescaleFrom="_lnT34Pa_EeGHXuMIrzLXMA">
+            <measureRelationships xmi:type="smm:RescaledMeasureRelationship"
+                xmi:id="_lnT34Pa_EeGHXuMIrzLXMA" name="DFC_to_wEIF" from="_jYXmAPa9EeGHXuMIrzLXMA"
+                to="_XVXcQPa_EeGHXuMIrzLXMA"/>
+        </measureElements>
+        <measureElements xmi:type="smm:CollectiveMeasure" xmi:id="_rX0d8Pa_EeGHXuMIrzLXMA"
+            name="EIFs" shortDescription="External Inteface File Size"
+            category="_lMjzofOgEeGtUOd1RMSY8w" trait="_Tfs90Pa1EeGHXuMIrzLXMA"
+            scope="_SXzdcPa8EeGHXuMIrzLXMA" unit="Cardinal"
+            baseMeasureFrom="_ahK_APbBEeGHXuMIrzLXMA" baseMeasureTo="_z4oBYPa_EeGHXuMIrzLXMA">
+            <measureRelationships xmi:type="smm:BaseMeasureRelationship"
+                xmi:id="_z4oBYPa_EeGHXuMIrzLXMA" name="EIFs_to_wEIF" to="_XVXcQPa_EeGHXuMIrzLXMA"
+                from="_rX0d8Pa_EeGHXuMIrzLXMA"/>
+        </measureElements>
+        <measureElements xmi:type="smm:Characteristic" xmi:id="__ugqQPa_EeGHXuMIrzLXMA"
+            name="AutomatedFunctionPointSize" measures="_HlA3APbBEeGHXuMIrzLXMA"
+            characteristics="_mujx4POgEeGtUOd1RMSY8w _DEBJkPO3EeGtUOd1RMSY8w _Tfs90Pa1EeGHXuMIrzLXMA"/>
+        <measureElements xmi:type="smm:CollectiveMeasure" xmi:id="_HlA3APbBEeGHXuMIrzLXMA"
+            name="AFPs" shortDescription="Automated Function Point Size"
+            category="_lMjzofOgEeGtUOd1RMSY8w" trait="__ugqQPa_EeGHXuMIrzLXMA"
+            scope="_If4nQPO1EeGtUOd1RMSY8w" unit="Cardinal"
+            baseMeasureTo="_VSghwPbBEeGHXuMIrzLXMA _ahK_APbBEeGHXuMIrzLXMA _ePrREPbBEeGHXuMIrzLXMA _i2m_8PbBEeGHXuMIrzLXMA">
+            <measureRelationships xmi:type="smm:BaseMeasureRelationship"
+                xmi:id="_VSghwPbBEeGHXuMIrzLXMA" name="AFPs_to_ILFs" to="_DwRE8Pa_EeGHXuMIrzLXMA"
+                from="_HlA3APbBEeGHXuMIrzLXMA"/>
+            <measureRelationships xmi:type="smm:BaseMeasureRelationship"
+                xmi:id="_ahK_APbBEeGHXuMIrzLXMA" name="AFPs_to_EIFs" to="_rX0d8Pa_EeGHXuMIrzLXMA"
+                from="_HlA3APbBEeGHXuMIrzLXMA"/>
+            <measureRelationships xmi:type="smm:BaseMeasureRelationship"
+                xmi:id="_ePrREPbBEeGHXuMIrzLXMA" name="AFPs_to_EIs" to="_5dUi0PO7EeGtUOd1RMSY8w"
+                from="_HlA3APbBEeGHXuMIrzLXMA"/>
+            <measureRelationships xmi:type="smm:BaseMeasureRelationship"
+                xmi:id="_i2m_8PbBEeGHXuMIrzLXMA" name="AFPs_to_EOs" to="_XZnVQPOtEeGtUOd1RMSY8w"
+                from="_HlA3APbBEeGHXuMIrzLXMA"/>
+        </measureElements>
+    </libraries>
+</smm:SmmModel>
